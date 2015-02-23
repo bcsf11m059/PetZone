@@ -1,0 +1,75 @@
+﻿#first_pet_name, #catogery_name {
+    margin-top:40px;
+    font-size:30px;
+    margin-bottom:40px;
+}
+
+
+#row1-sidebar {
+    background-color:darkolivegreen;
+}
+
+#row1-sidebar-item1, #row1-sidebar-item2,
+#row1-sidebar-item3, #row1-sidebar-item4,
+#row1-sidebar-item5 {
+    font-size:20px;
+    margin-left:50px;
+    color:yellowgreen;
+}
+
+.active {
+    background-color:white;
+}
+
+#image {
+    margin-top:40px;
+}
+
+.product-name{
+    margin-top:2px;
+    color:white;
+}
+
+.product-price {
+    margin-top:-15px;
+    margin-bottom:20px;
+}
+
+#search-ct {
+    margin-top:1px;
+    background-color:darkolivegreen;
+}
+
+#src-type, #src-cat {
+    width:200px;
+    margin-left:40px;
+}
+
+#src-request{
+    color:darkolivegreen;
+    margin-left:40px;    
+    background-color:white;
+}
+
+#src-request-price {
+    color:darkolivegreen;
+    margin-top:20px;
+    margin-left:40px;
+    background-color:white;
+}
+
+#src-type, #src-cat {
+    width:200px;
+    margin-left:40px;
+}
+
+#src-min{
+    width:90px;
+    margin-left:40px;
+}
+
+#src-max {
+    width:90px;
+    margin-top:-35px;
+    margin-left:180px;
+}

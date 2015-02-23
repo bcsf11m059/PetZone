@@ -1,0 +1,19 @@
+﻿@model EAD_PROJECT_MVC.Models.User
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/shared/_header_footer.cshtml";    
+}
+
+<div class="row" id="login_div">
+    <div class="col-md-offset-3 col-md-6">
+        <form method="post" id="form-login" action="~/Login/LoginInfo">
+            <label id="form-label"></label><br />
+             
+            <input type="text" name="Name" id="lg-name" class="form-control" placeholder="Name"/><br />
+            
+            <input type="password" name="Password" id="lg-password" class="form-control" placeholder="Password"/><br />            
+           
+            <a><input type="submit" id="login-request" Value="LOGIN"/></a>                         
+        </form>
+    </div>
+</div>

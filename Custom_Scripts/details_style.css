@@ -1,0 +1,80 @@
+﻿#pet_name {
+    margin-top:40px;
+    font-size:30px;
+    color:silver;
+    font-stretch:expanded;
+}
+
+#pet_name1 {
+    margin-top:40px;
+    font-size:30px;
+    margin-left:100px;
+    color:white;
+}
+
+#detail-label {
+    color:royalblue;
+    margin-left:100px;
+}
+
+#detail-para {
+    color:silver;
+}
+
+#bully {
+    margin-top:50px;
+}
+
+#buy-form {
+    background-color:#333;
+    margin-top:80px;
+    width:590px;
+    margin-bottom:100px;
+}
+
+#address, #visa, #mobile {
+    margin-left:100px;
+    width:300px;
+    height:40px;
+}
+
+#visa-label, #mobile-label,#address-label{
+    color:white;
+    font-size:20px;
+    margin-top:20px;
+    margin-left:100px;
+    width:300px;
+}
+#dropdownMenu2{
+    margin-left:90px;   
+    height:40px;
+}
+
+#dropdownMenu1{
+    margin-left:100px;
+    height:40px;
+    width:40px;
+    color:black;
+}
+
+#size {
+    margin-left:100px;    
+    width:-100px;
+}
+
+#order, #login-btn  {
+    margin-left:100px;
+    margin-bottom:40px;
+    color:#333;
+    margin-top:80px;
+    background-color:wheat;
+    font-stretch:expanded;
+    font-size:30px;
+}
+
+#qty,#size {
+    margin-top:10px;
+    font-size:20px;
+    margin-left:100px;
+    color:wheat;
+}

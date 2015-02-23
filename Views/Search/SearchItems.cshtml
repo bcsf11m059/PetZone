@@ -1,0 +1,36 @@
+﻿@model EAD_PROJECT_MVC.Models.Pet[]
+@{
+    ViewBag.Title = "SearchItems";
+    Layout = "~/Views/shared/_header_footer.cshtml";    
+}
+
+
+<div class="row">
+    <div class="col-md-offset-3">
+        @if (Model.Count() == 0)
+        { 
+          <h2 style="margin-top:100px; color:darkolivegreen;"> No search results found </h2>  
+        }
+        else
+        {
+            for (int i = 0; i < Model.Count() ; i++ )
+            {
+                <div class="product-item-column" style="margin-top:70px;">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Content("/Pet/details/"+@Model[i].PID)'">
+							        <img style="margin-left:0px;"src="~/@Model[i].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Content("/Petdetails/"+@Model[i].PID)'"> <label class="product"> @Model[i].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[i].price</span></p>                                
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+            }
+        }
+    </div>
+</div>

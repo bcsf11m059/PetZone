@@ -1,0 +1,187 @@
+﻿@{
+    ViewBag.Title = "Header_footer";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>PetZone</title>
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap-theme.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Custom_Scripts/index_style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Custom_Scripts/pets_style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Custom_Scripts/login_style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Custom_Scripts/details_style.css")" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-2.1.3,min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Custom_Scripts/login_signup.js?12345"></script>
+    <script src="~/Custom_Scripts/Changings.js"></script>
+
+</head>
+
+<body id="layout">
+
+    <header class="page-header" id="header-page">
+        <div class="row" id ="headre-row">
+            <div class="col-md-4" id="logo">
+                <img src="~/images/petzone.jpg" alt="petzone"/>
+            </div>
+
+            <div class="col-md-3 col-md-offset-2">
+
+                <form role="form" class="block-search" action="~/Search/SearchItems" method="post">
+
+	                <div class="input-group">
+                
+		                <input type="text" name="search" id="search" style="height:42px;" class="form-control" placeholder="Search.."/>
+		                <span class="input-group-btn">
+			                <button id="search-btn" class="btn btn-primary-very-light submit-button" type="submit" style="height:42px;"><span class="icon glyphicon glyphicon-search"></span></button>
+		                </span>                
+
+	                </div>
+                </form>
+            </div>           
+
+            @if( Session["name"] == null )
+            {
+                <div class="col-md-2">
+                    <div class="btn-group">
+                        <a class="btn" id="login" href="#" onclick="location.href='@Url.Content("~/Login/login")'">LOGIN <span class="icon glyphicon glyphicon-log-in"></span></a>                
+                        <a class="btn" id="signup" href="#" onclick="location.href='@Url.Content("~/Login/signup")'">SIGNUP <span class="icon glyphicon glyphicon-sign-up"></span></a>                
+                    </div>
+                </div>
+            }         
+            else if( Session["name"].Equals("Admin") )   
+            {
+                <div class="col-md-2">
+                    <ul style="margin-top:45px">                       
+                        <li class="dropdown">
+                            <a id="list-item-22" href="#" data-toggle="dropdown" class="dropdown-toggle" style=" font-size:30px; font-style:initial; margin-top: 30px; color: white;"> <span style="color:white; background-color:black;"class="icon glyphicon glyphicon-user"></span> @Session["name"] </a>                    
+                            <ul class="dropdown-menu" style="width:200px;">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="menu-items">
+                                                <li><a class="btn" id="add_pet_request" href="#" onclick="location.href='@Url.Content("~/Admin/addPet")'" Style=" margin-top:20px;  background-color:darkolivegreen; color:white; width:120px;">ADD PET</a></li>
+                                                <li><a class="btn" id="logout1" href="#" onclick="location.href='@Url.Content("~/Login/logout")'" Style=" margin-top:20px;  background-color:darkolivegreen; color:white;width:120px;">LOGOUT <span class="icon glyphicon glyphicon-log-out"></span></a></li>                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>                                                                
+
+                            </ul>
+                        </li>                                               
+                    </ul>
+
+                </div>                
+                
+            }
+            else
+            {
+                <div class="col-md-2">
+                    <ul style="margin-top:45px">                       
+                        <li class="dropdown">
+                            <a id="list-item-21" href="#" data-toggle="dropdown" class="dropdown-toggle" style=" font-size:30px; font-style:initial; margin-top: 30px; color:white;"><span style="color:white; background-color:black;"class="icon glyphicon glyphicon-user"></span> @Session["name"] </a>                    
+                            <ul class="dropdown-menu" style="width:200px;">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="menu-items">
+                                                <li><a class="btn" id="logout" href="#" onclick="location.href='@Url.Content("~/Login/logout")'" Style=" margin-top:20px; background-color:darkolivegreen; color:white; width:120px;">LOGOUT <span class="icon glyphicon glyphicon-log-out"></span></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>                       
+                    </ul>
+                </div>                
+                
+            }
+        </div>
+
+    </header>
+
+    <nav class="collapse navbar-collapse" id="navbar-tab" role="navigation">
+
+        <div>
+            <ul class="nav navbar-nav" id="navbar-tab-list"> 
+                <li class="item active"> <a href="#" id="list-item-1"  onclick="location.href='@Url.Content("~/")'"> <span class="icon glyphicon glyphicon-home"></span> Home </a></li>                               
+                <li class="dropdown">
+                    <a id="list-item-2" href="#" data-toggle="dropdown" class="dropdown-toggle"> Puppies </a>                    
+                    <ul class="dropdown-menu" id="drop_list">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="menu-items">                                        
+                                        <li ><a id="puppies_list_i1" href="#" onclick="location.href='@Url.Content("~/Pet/poodles")'">Poodles</a></li>
+                                        <li ><a id="puppies_list_i2" href="#" onclick="location.href='@Url.Content("~/Pet/bulldogs")'">Bulldogs</a></li>
+                                        <li ><a id="puppies_list_i3" href="#" onclick="location.href='@Url.Content("~/Pet/dachshunds")'">DachShunds</a></li>
+                                        <li ><a id="puppies_list_i4" href="#" onclick="location.href='@Url.Content("~/Pet/beagles")'">Beagles</a></li>
+                                        <li ><a id="puppies_list_i5" href="#" onclick="location.href='@Url.Content("~/Pet/boxers")'">Boxers</a></li>                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li class="dropdown"> 
+                    <a id="list-item-3" href="cats.html" data-toggle="dropdown" class="dropdown-toggle"> Cats </a>
+                    <ul class="dropdown-menu" id="drop_list1">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="menu-items">                                        
+                                        <li ><a id="cat_list_i1" href="#" onclick="location.href='@Url.Content("~/Pet/bengal")'">Bengal</a></li>
+                                        <li ><a id="cat_list_i2" href="#" onclick="location.href='@Url.Content("~/Pet/birman")'">Birman</a></li>
+                                        <li ><a id="cat_list_i3" href="#" onclick="location.href='@Url.Content("~/Pet/bombay")'">Bombay</a></li>
+                                        <li ><a id="cat_list_i4" href="#" onclick="location.href='@Url.Content("~/Pet/burmese")'">Burmese</a></li>                            
+                                    </ul>
+                                </div>
+                               
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown"> 
+                    <a id="list-item-4" href="cats.html" data-toggle="dropdown" class="dropdown-toggle"> Parrots </a>
+                    <ul class="dropdown-menu" id="drop_list2">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="menu-items">                                        
+                                        <li ><a id="parrots_list_i1" href="#" onclick="location.href='@Url.Content("~/Pet/lovebirds")'">Lovebirds</a></li>
+                                        <li ><a id="parrots_list_i2" href="#" onclick="location.href='@Url.Content("~/Pet/caiquess")'">Caiquess</a></li>
+                                        <li ><a id="parrots_list_i3" href="#" onclick="location.href='@Url.Content("~/Pet/parrotlets")'">Parrotlets</a></li>                                        
+                                    </ul>
+
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </li>                
+                <li > <a id="list-item-6" href="#" onclick="location.href='@Url.Content("/Search/CustomSearch")'"> Search </a></li>              
+                <li > <a id="list-item-7" href="about.html"> About </a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    @RenderBody()
+    <script src="~/Scripts/jquery-2.1.3.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Custom_Scripts/login_signup.js"></script>
+    <script src="~/Custom_Scripts/Changings.js"></script>
+
+</body>
+</html>
+
+
+

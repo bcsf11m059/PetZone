@@ -1,0 +1,18 @@
+﻿@model EAD_PROJECT_MVC.Models.User
+@{
+    ViewBag.Title = "WrongLogin";
+    Layout = "~/Views/shared/_header_footer.cshtml";    
+}
+
+<div class="row" id="login_div">
+    <div class="col-md-offset-3 col-md-6">
+        <form method="post" id="form-login" action="~/Order/LoginInfo">
+            <label id="form-label">Login and enjoy shoping</label><br />
+            <a href="#" id="wrong-login">User name or password is incorrect</a>
+            <input type="text" name="Name" id="lg-name" class="form-control" placeholder="Name"/>
+            <input type="password" name="Password" id="lg-password" class="form-control" placeholder="Password"/>
+            <a><input type="submit" id="login-request" Value="LOGIN"/></a>                         
+
+        </form>
+    </div>
+</div>

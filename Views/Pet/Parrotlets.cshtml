@@ -1,0 +1,346 @@
+﻿@model EAD_PROJECT_MVC.Models.Pet[]
+@{
+    ViewBag.Title = "Parrotlets";
+    Layout = "~/Views/Shared/_header_footer.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-3">
+        <label id="first_pet_name"> Parrotlets </label>
+        <p>
+            Parrotlets are exactly as their names describe...
+            They have a parrot-sized personality in a lovebird-sized package.
+            These birds are the smallest parrots kept as pets and they have about 
+            the same size personality as an Amazon.
+        </p>
+
+    </div>
+
+    <div class="col-md-5">
+        <img src="~/images/parrots/parots/parrotlet.jpg" id="image" alt="boxer" />
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-ms-offset-1 col-md-10 col-md-offset-1">
+        <label id="catogery_name"> In this Catagory </label>
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[0].PID)'">
+							        <img src="~/@Model[0].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[0].PID)'"> <label class="product"> @Model[0].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[0].price</span></p>
+					        </div><!-- /.product-detail -->
+                            @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[0].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[0].PID'>Delete</a>;
+                                    }
+                                }
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[1].PID)'">
+							        <img src="~/@Model[1].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[1].PID)'"> <label class="product"> @Model[1].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[1].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[1].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[1].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[2].PID)'">
+							        <img src="~/@Model[2].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[2].PID)'"> <label class="product"> @Model[2].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[2].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[2].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[2].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+            </div>
+
+            @* ------------------------------------------------------------------------------------------------------------------------------------- *@
+
+            <div class="col-md-3">
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[3].PID)'">
+							        <img src="~/@Model[3].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[3].PID)'"> <label class="product"> @Model[3].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[3].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[3].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[3].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[4].PID)'">
+							        <img src="~/@Model[4].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[4].PID)'"> <label class="product"> @Model[4].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[4].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[4].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[4].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[5].PID)'">
+							        <img src="~/@Model[5].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[5].PID)'"> <label class="product"> @Model[5].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[5].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[5].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[5].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+            </div>
+
+            @* ------------------------------------------------------------------------------------------------------------------------------------- *@
+
+            <div class="col-md-3">
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[6].PID)'">
+							        <img src="~/@Model[6].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[6].PID)'"> <label class="product"> @Model[6].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[6].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[6].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[6].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[7].PID)'">
+							        <img src="~/@Model[7].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[7].PID)'"> <label class="product"> @Model[7].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[7].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[7].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[7].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[8].PID)'">
+							        <img src="~/@Model[8].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[8].PID)'"> <label class="product"> @Model[8].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[8].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[8].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[8].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+            </div>
+
+            @* ------------------------------------------------------------------------------------------------------------------------------------- *@
+
+            <div class="col-md-3">
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[9].PID)'">
+							        <img src="~/@Model[9].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[9].PID)'"> <label class="product"> @Model[9].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[9].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[9].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[9].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[10].PID)'">
+							        <img src="~/@Model[10].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[10].PID)'"> <label class="product"> @Model[10].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[10].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[10].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[10].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+                <div class="product-item-column">
+			        <div class="product-item-grid-view">
+				        <div class="product-item">
+					        <div class="product-image">
+						        <a href="#" onclick="location.href='@Url.Action("details/"+@Model[11].PID)'">
+							        <img src="~/@Model[11].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						        </a>
+					        </div><!-- /.product-image -->
+					        <div class="product-detail text-md-center">
+						        <h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details/"+@Model[11].PID)'"> <label class="product"> @Model[11].Name</label> </a></h3>
+						        <p class="product-price"><span class="price">@Model[11].price</span></p>
+                                @if (Session["name"] != null )
+                                {
+                                    if ( Session["name"].Equals( "Admin" ) )
+                                    {                       
+                                                <a class="edit" href='/Admin/Edit/@Model[11].PID'>Edit </a>;
+                                                <a class="delete" style='margin-left:5px' href='/Admin/Delete/@Model[11].PID'>Delete</a>;
+                                    }
+                                }
+					        </div><!-- /.product-detail -->
+				        </div><!-- /.product-item -->
+			        </div><!-- /.product-item-grid-view -->
+		        </div>
+
+            </div>
+
+            @* ------------------------------------------------------------------------------------------------------------------------------------- *@
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,249 @@
+﻿html {
+    background-color:darkolivegreen;
+}
+
+#logo {
+    margin-top:30px;
+    margin-left:50px;
+    margin-bottom:20px;
+}
+
+#signup {
+    margin-left:5px;
+}
+
+.edit, .delete {
+    font-size:20px;
+}
+
+#search, #search-btn, #login, #signup, #logout, #add_pet{
+    color:white;
+    margin-top:50px;
+    background-color:darkolivegreen;
+}
+
+#div-row-1, #div-row-2, #div-row-3 {
+    margin-top:40px;
+}
+#logout, #user{
+    color:white;
+    margin-top:50px;
+    background-color:darkolivegreen;
+}
+
+#name {
+    margin-top:50px;
+    color:darkolivegreen;
+}
+
+#navbar-tab {            
+    color:white;     
+    background-color:darkolivegreen;
+}
+
+#header-page, #header-row{
+    margin-right:20px;
+    margin-top:5px;
+    margin-bottom:0;
+}
+
+#puppies-items1, #puppies-items2{
+list-style: none;
+padding-left: 20px;
+}
+
+#list-item-1, #list-item-2, #list-item-3,
+#list-item-4, #list-item-5, #list-item-6,  
+#list-item-7, #petzone-label{
+    color:white;
+    font-family:Calibri;
+    font-style:normal;
+    font-size:x-large;
+    background-color:darkolivegreen;
+}
+
+#drop_list, #drop_list1{
+    width:200px;
+    background-color:darkolivegreen;
+}
+
+.product {
+    font-size:20px;
+    color:silver;
+}
+
+#drop_list2 {
+    width:250px;
+    background-color:darkolivegreen;
+}
+
+#puppies_list_i1, #puppies_list_i6, #puppies_list_i2, 
+#puppies_list_i7, #puppies_list_i3, #puppies_list_i8,
+#puppies_list_i4, #puppies_list_i9, #puppies_list_i5, 
+#puppies_list_i10,
+#cat_list_i1, #cat_list_i6, #cat_list_i2, 
+#cat_list_i7, #cat_list_i3, #cat_list_i8,
+#cat_list_i4, #cat_list_i5, 
+#parrots_list_i1,#parrots_list_i2,#parrots_list_i3,
+#parrots_list_i4,#parrots_list_i5
+ {
+    margin-top:20px;
+    color:white;
+    font-family:Calibri;
+    font-style:normal;
+    font-size:x-large;
+    background-color:darkolivegreen;
+}
+
+#navbar-tab-list {
+    margin-left:80px;
+}
+#carousel {
+    margin-right:0px;
+    background-color:darkolivegreen;
+    height:500px;
+}
+
+#carosal-row {
+    margin-right:0px;
+    margin-left:-0px;
+}
+
+#carosal-div1-lbl1
+{
+    font-family:Calibri;
+    font-size:60px;
+    margin-bottom:70px;
+    margin-right:50px;
+    margin-left:450px;   
+    background-color:darkmagenta;
+}
+
+#carosal-div2-lbl1
+{
+    font-family:Calibri;
+    font-size:60px;
+    margin-bottom:270px;
+    margin-right:-50px;
+    margin-left:-80px; 
+    background-color:navy;
+    color:silver;  
+}
+
+#carosal-div5-lbl1
+{
+    font-family:Calibri;
+    font-size:60px;
+    margin-bottom:70px;
+    margin-right:50px;
+    margin-left:450px;   
+    background-color:chocolate;
+}
+
+#carosal-div3-lbl1{
+    font-family:Calibri;
+    font-size:60px;
+    margin-top:120px;
+    margin-right:200px;
+    margin-left:-200px;
+    background-color:magenta;
+}
+ 
+#carosal-div3-lbl2{
+    font-family:Calibri;
+    font-size:40px;
+    margin-top:0px;
+    margin-right:350px;
+    margin-bottom:100px;
+    margin-left:-50px;
+    background-color:navy;
+}
+
+#carosal-div3-lbl3{
+    font-family:Calibri;
+    font-size:100px;
+    margin-top:-100px;
+    margin-bottom:20px;
+    margin-right:400px;
+    margin-left:-20px;
+    background-color:maroon;
+}
+
+#carosal-div4-lbl1{
+    font-family:Calibri;
+    font-size:60px;
+    margin-top:0px;
+    margin-right:550px;
+    margin-left:50px;
+    background-color:darkmagenta;
+}
+ 
+#carosal-div4-lbl2{
+    font-family:Calibri;
+    font-size:40px;
+    margin-top:0px;
+    margin-right:450px;
+    margin-bottom:100px;
+    margin-left:-50px;
+    background-color:tomato;
+}
+
+#carosal-div4-lbl3{
+    font-family:Calibri;
+    font-size:100px;
+    margin-top:-100px;
+    margin-bottom:20px;
+    margin-right:480px;
+    margin-left:-20px;
+    background-color:gray;
+}
+
+.item.next .carousel-caption {
+    opacity: 0;
+}
+
+.carousel-caption {
+  transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .4s ease-in-out;
+}
+
+#carousel-image {
+    background-color;
+}
+
+#recent-dogs, #recent-cats, #recent-parrots {
+    font-size:25px;
+    font-family:Calibri;
+    color:black;
+    background-color:white;   
+}
+
+.btn-succes {
+    background-color:darkolivegreen;
+    border:none;    
+    color:white;
+}
+
+.controls {
+margin-right:70px;
+}
+
+p {
+    font-size:20px;
+    color:silver;
+}
+
+.price{
+    color:silver;
+    background-color:black;
+    font-size:18px;
+}
+
+#first_pet_name {
+    color:wheat;
+}
+
+#catogery_name {
+    color:wheat;
+}

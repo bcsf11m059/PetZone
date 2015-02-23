@@ -1,0 +1,347 @@
+﻿@model EAD_PROJECT_MVC.Models.Pet[]
+@{
+    Layout = "~/Views/shared/_header_footer.cshtml";    
+}
+
+<div class="row" id="carosal-row">
+
+    <div id="carousel" class="carousel slide col-md-12" data-ride="carousel" data-interval="3000" data-wrap="true" data-pause="hover">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
+            <li data-target="#carousel" data-slide-to="4"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" id="carousel-item1">
+                <img src="images/dog1.jpg" alt="Doggy" />
+
+                <div class="carousel-caption vertical-center text-center">
+                    <label id="carosal-div1-lbl1">Your PET loves you MORE</label>          
+                </div>                    
+          
+            </div>
+
+            <div class="item">
+                <img src="images/cat1.png" alt="caty" />
+
+                <div class="carousel-caption vertical-center text-center">
+                    <label id="carosal-div2-lbl1">The perfect place for your PET</label>
+                </div>
+
+            </div>
+
+            <div class="item">
+                <img src="images/parrots.png" alt="caty" />
+
+                <div class="carousel-caption vertical-center text-center">
+                    <label id="carosal-div3-lbl1">Try to know</label>
+                    <label id="carosal-div3-lbl2">best about your</label>
+                    <label id="carosal-div3-lbl3">PET</label>
+                </div>
+
+            </div>
+
+            <div class="item">
+                <img src="images/cat2.jpg" alt="caty" />                    
+                  
+                <div class="carousel-caption vertical-center text-center">
+                    <label id="carosal-div4-lbl1">LEARN </label>
+                    <label id="carosal-div4-lbl2"> how to take</label>
+                    <label id="carosal-div4-lbl3">CARE</label>
+                </div>
+                    
+            </div>
+
+            <div class="item">
+                <img src="images/dog2.jpg" alt="caty" />                    
+                  
+                <div class="carousel-caption vertical-center text-center">
+                    <label id="carosal-div5-lbl1">Most comfortable PETZONE</label>          
+                </div>                    
+                    
+            </div>
+                
+        </div>
+
+        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+</div>
+
+<div class="row" id ="div-row-1">        
+       
+    <div class=" col-md-offset-1 col-md-2">
+        <label id="recent-dogs">RECENT PUPPIES</label><br/>        
+        <p>Find recently added Puppies within week and make oyur choice</p>        
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[0].PID)'">
+							<img src="~/@Model[0].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[0].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[0].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[1].PID)'">
+							<img src="~/@Model[1].Imgae " width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[1].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[1].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[2].PID)'">
+							<img src="~/@Model[2].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a  href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[2].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[2].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[3].PID)'">
+							<img src="~/@Model[3].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[3].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[3].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+</div>
+
+<div class="row" id ="div-row-2">        
+        
+    <div class="col-md-offset-1 col-md-2 ">
+        <label id="recent-cats">RECENT CATS</label>
+        <p>Find recently added Cats within week and make oyur choice</p>
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[4].PID)'">
+							<img src="~/@Model[4].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[4].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[4].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[5].PID)'">
+							<img src="~/@Model[5].Imgae " width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[5].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[5].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[6].PID)'">
+							<img src="~/@Model[6].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[6].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[6].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[7].PID)'">
+							<img src="~/@Model[7].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[7].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[7].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+</div>
+
+<div class="row" id ="div-row-3">        
+        
+    <div class="col-md-offset-1 col-md-2">
+        <label id="recent-parrots">RECENT PARROTS</label>
+        <p>Find recently added Parrots within week and make oyur choice</p>
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[8].PID)'">
+							<img src="~/@Model[8].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[8].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[8].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[9].PID)'">
+							<img src="~/@Model[9].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[9].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[9].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[10].PID)'">
+							<img src="~/@Model[10].Imgae " width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[10].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[10].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="product-item-column">
+			<div class="product-item-grid-view">
+				<div class="product-item">
+					<div class="product-image">
+						<a href="#" onclick="location.href='@Url.Content("~/Pet/details/"+@Model[11].PID)'">
+							<img src="~/@Model[11].Imgae" width="262" height="202" alt="Product" class="center-block img-responsive">
+						</a>
+					</div><!-- /.product-image -->
+					<div class="product-detail text-md-center">
+						<h3 class="product-name"><a href="#" onclick="location.href='@Url.Action("details")'"> <label class="product"> @Model[11].Name</label> </a></h3>
+						<p class="product-price"><span class="price">@Model[11].price</span></p>
+					</div><!-- /.product-detail -->
+				</div><!-- /.product-item -->
+			</div><!-- /.product-item-grid-view -->
+		</div>
+
+    </div>
+</div>

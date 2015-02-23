@@ -1,0 +1,32 @@
+﻿@model EAD_PROJECT_MVC.Models.User
+
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_header_footer.cshtml";
+}
+
+<div class="row" id="login_div">
+    <div class="col-md-offset-3 col-md-6">
+
+        <form method="post" id="form-signup" action="~/Login/Signup">
+
+            @Html.AntiForgeryToken()            
+            @Html.ValidationSummary(true)
+            <label id="form-label"></label>                        
+            @Html.TextBoxFor( model => model.Name, new { @id = "sn-name", @class="form-control", @placeholder = "Name", @type="text"})            
+            <a><input type="button" id="check-request" Value="Check"/></a><br />
+
+            <p id="signup_para"></p>
+            <label id="myid1">@Html.ValidationMessageFor(model => model.Name)</label>            
+
+            @Html.TextBoxFor( model => model.Email, new { @id = "sn-email", @class="form-control", @placeholder = "Email", @type="text"})<br />
+            <label id="myid2">@Html.ValidationMessageFor(model => model.Email)</label>
+                        
+            @Html.TextBoxFor( model => model.Password , new { @id = "sn-password", @class="form-control", @placeholder = "Password", @type="password"})<br />            
+            <label id="myid3">@Html.ValidationMessageFor(model=>model.Password)</label><br />
+
+            <a><input type="submit" id="signup-request" Value="SIGNUP"/></a>
+        </form>
+
+    </div>
+</div>

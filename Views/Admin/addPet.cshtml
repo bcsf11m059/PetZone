@@ -1,0 +1,55 @@
+﻿@model EAD_PROJECT_MVC.Models.Pet
+@{
+    ViewBag.Title = "addPet";
+    Layout = "~/Views/Shared/_header_footer.cshtml";
+}
+
+<div class="row" id="login_div">
+    <div class="col-md-offset-3 col-md-6">
+    
+        <form method="post" id="form-signup" action="~/Admin/addPet">
+
+            @Html.AntiForgeryToken()            
+            @Html.ValidationSummary(true)
+
+            <label id="form-label-pt">Add pet Information</label> <br />
+            <label id="form-label1">Name</label>
+
+            @Html.TextBoxFor( model => model.Name, new { @id = "pt-name", @class="form-control", @placeholder = "Name", @type="text"}) <br />
+            <label id="myid11">@Html.ValidationMessageFor(model => model.Name)</label>            <br />
+
+            <label id="form-label3">Type</label>
+            @Html.TextBoxFor( model => model.Type, new { @id = "pt-type", @class="form-control", @placeholder = "Type", @type="text"}) <br />
+            <label id="myid12">@Html.ValidationMessageFor(model => model.Type)</label>            <br />
+
+            <label id="form-label2">Catagory</label>
+            @Html.TextBoxFor( model => model.Catagory, new { @id = "pt-cat", @class="form-control", @placeholder = "Catagory", @type="text"}) <br />
+            <label id="myid13">@Html.ValidationMessageFor(model => model.Catagory)</label>            <br />
+
+            <label id="form-label4">Price</label>
+            @Html.TextBoxFor( model => model.price, new { @id = "pt-email", @class="form-control", @placeholder = "Price", @type="text"}) <br />
+            <label id="myid4">@Html.ValidationMessageFor(model => model.price)</label>            <br />
+
+            <label id="form-label5">Description</label>
+            @Html.TextBoxFor( model => model.Desciption, new { @id = "pt-desc", @class="form-control", @placeholder = "Description", @type="text"}) <br />
+            <label id="myid5">@Html.ValidationMessageFor(model => model.Desciption)</label>            <br />
+
+            <label id="form-label6">Quantity</label>
+            @Html.TextBoxFor( model => model.Quantity, new { @id = "pt-qty", @class="form-control", @placeholder = "Quantity", @type="text"}) <br />
+            <label id="myid6">@Html.ValidationMessageFor(model => model.Quantity)</label>            <br />
+
+            <label id="form-label7">IconImage</label>
+            @Html.TextBoxFor( model => model.iconImage, new { @id = "pt-iconimg", @class="form-control", @placeholder = "iconImage", @type="text"}) <br />
+            <label id="myid7">@Html.ValidationMessageFor(model => model.iconImage)</label>            <br />
+
+            <label id="form-label8">Image</label>
+            @Html.TextBoxFor( model => model.Imgae, new { @id = "pt-img", @class="form-control", @placeholder = "image", @type="text"}) <br />
+            <label id="myid8">@Html.ValidationMessageFor(model => model.Imgae)</label>            <br />
+
+            <a><input type="submit" id="add-request" Value="ADD PET"/></a>
+        </form>
+
+    </div>
+</div>
+
+
